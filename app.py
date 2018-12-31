@@ -4,6 +4,8 @@ from pprint import pformat
 class App():
     def __init__(self, scope):
         self.scope = scope
+        if scope['type'] != 'http':
+            raise Exception()
 
     async def __call__(self, receive, send):
         await send({

@@ -7,4 +7,4 @@ ADD app.py .
 
 EXPOSE 8000
 
-CMD uvicorn app:App --bind 0.0.0.0:8000
+CMD uvicorn app:App --host 0.0.0.0 --port 8000
